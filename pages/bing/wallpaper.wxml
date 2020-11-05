@@ -1,0 +1,16 @@
+<view class="container">
+  <scroll-view class="scroll-view" scroll-y="{{true}}" bindscrolltolower="bindscrolltolower" enhanced="{{true}}">
+    <view wx:for="{{ list }}" id="page_{{pageIndex}}" wx:for-index="pageIndex" wx:for-item="items" wx:key="index">
+      <block wx:if="{{ items.length > 0 }}">
+        <view class="item" wx:for="{{ items }}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <image class="img" mode="aspectFill" src="{{'https://www.bing.com/'+item.url}}"></image>
+        </view>
+      </block>
+      <view wx:else style="height: {{items.height}}rpx">
+      </view>
+    </view>
+    <view class="msg" wx:if="{{loading}}">加载中...</view>
+    <view class="msg" wx:if="{{loaded}}">这是我的底线了</view>
+  </scroll-view>
+
+</view>

@@ -1,66 +1,49 @@
-// pages/Bing/wallpaper.js
+import {
+  URL_BING_WALLPAPER
+} from '../../config/url';
+
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    list: [],
+    pageIndex: 0,
+    loading: false,
+    loaded: false
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    this.getDataByPage();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  bindscrolltolower() {
+    const {
+      pageIndex
+    } = this.data;
+    this.setData({
+      loading: true
+    });
+    // this.getDataByPage(pageIndex + 1);
   },
+  getDataByPage(pageIndex = 0, pageSize = 5) {
+    if (pageIndex > 0) {
+      this.setData({
+        loading: true
+      });
+    }
+    wx.request({
+      url: URL_BING_WALLPAPER,
+      method: 'GET',
+      data: {
+        format: 'js',
+        mkt: 'zh-CN',
+        idx: pageIndex,
+        n: pageSize
+      }
+    }).then(res => {
+      this.setData({
+        [`list[${pageIndex}]`]: res.data.images,
+        loading: false,
+        pageIndex
+      });
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    });
   }
 })

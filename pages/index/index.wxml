@@ -12,8 +12,6 @@
 
   ## 开发规范
   - wxml 里面的类名尽量少，类名的重用在 less 里面进行
-  - 尽量使用vant-ui(有赞UI 库已经通过npm安装)，文档地址 https://youzan.github.io/vant-weapp/#/intro
-  - vant-ui 里面的日期，地址等性能较差的组件禁止使用（直接使用原生的 picker 组件）
   - npm 安装优先 基础的工具方法已经通过 npm 安装了一些，有需要在通过 npm
   - wx的接口已经做了 promise化 直接使用即可
   - lodash 已经放到了 lib 下引入对应的文件使用即可
