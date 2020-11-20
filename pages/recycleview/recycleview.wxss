@@ -1,0 +1,14 @@
+.recycle-view {
+  height: 100vh;
+}
+.recycle-view .list {
+  display: flex;
+  flex-direction: column;
+}
+.recycle-view .list .item {
+  width: 100%;
+  height: 480rpx;
+}
+.recycle-view .recycle-loading {
+  height: 50px;
+}

@@ -1,0 +1,13 @@
+<scroll-view class="recycle-view" enhanced="{{true}}" scroll-y="{{true}}" lower-threshold="{{100}}"
+  bindscrolltolower="loadmore">
+  <view class="list">
+    <block wx:for="{{list}}" wx:for-item="parentItem" wx:key="parentIndex" wx:for-index="parentIndex">
+      <block wx:key="hsh" wx:for="{{parentItem}}">
+        <skeleton skeleton-id="{{item.hsh}}">
+          <image class="img" style="width:100%;height:480rpx;" src="{{'https://www.bing.com'+item.url}}" alt=""></image>
+        </skeleton>
+      </block>
+    </block>
+  </view>
+  <mp-loading ext-class="recycle-loading" show="{{loading}}"></mp-loading>
+</scroll-view>

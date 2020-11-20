@@ -10,11 +10,15 @@
   "tabBar": {
     "list": [{
         "pagePath": "pages/index/index",
-        "text": " 首页"
+        "text": " 首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-selected.png"
       },
       {
-        "pagePath": "pages/bing/wallpaper",
-        "text": "壁纸"
+        "pagePath": "pages/recycleview/recycleview",
+        "text": "长列表",
+        "selectedIconPath": "./images/user-selected.png",
+        "iconPath": "./images/user.png"
       }
     ]
   },
@@ -27,12 +31,11 @@
   "debug": false,
   "style": "v2",
   "usingComponents": {
-    "recycle-view": "miniprogram-recycle-view/recycle-view",
-    "recycle-item": "miniprogram-recycle-view/recycle-item"
+    "mp-loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
   },
   "sitemapLocation": "sitemap.json",
   "pages": [
     "pages/index/index",
-    "pages/bing/wallpaper"
+    "pages/recycleview/recycleview"
   ]
 }

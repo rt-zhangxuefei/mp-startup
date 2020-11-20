@@ -1,0 +1,5 @@
+<view class="item" id="item-{{skeletonId}}" style="width:100%;height:480rpx;">
+  <block wx:if="{{show}}">
+    <slot></slot>
+  </block>
+</view>

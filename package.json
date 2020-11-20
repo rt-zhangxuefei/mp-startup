@@ -9,13 +9,12 @@
   },
   "dependencies": {
     "bytes": "^3.1.0",
-    "dayjs": "^1.9.5",
+    "dayjs": "^1.9.6",
     "miniprogram-api-promise": "^1.0.4",
-    "miniprogram-recycle-view": "^0.1.5",
     "numeral": "^2.0.6",
     "weui-miniprogram": "^1.0.6"
   },
   "devDependencies": {
-    "miniprogram-api-typings": "^3.1.6"
+    "miniprogram-api-typings": "^3.2.0"
   }
 }
