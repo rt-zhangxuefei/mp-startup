@@ -29,7 +29,7 @@ Page({
       method: 'GET',
       data: {
         format: 'js',
-        idx: pageIndex,
+        idx: pageIndex * 7,
         n: 7,
         mkt: 'zh-CN'
       }
