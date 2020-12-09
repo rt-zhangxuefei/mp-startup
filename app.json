@@ -8,7 +8,8 @@
     "backgroundTextStyle": "dark"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": " 首页",
         "iconPath": "./images/home.png",
@@ -22,20 +23,20 @@
       }
     ]
   },
-  "subpackages": [{
-    "root": "packageA",
-    "pages": [
-      "pages/pageA/pageA"
-    ]
-  }],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": ["pages/pageA/pageA"]
+    }
+  ],
   "debug": false,
   "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
   "usingComponents": {
-    "mp-loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
+    "mp-loading": "weui-miniprogram/loading/loading"
   },
   "sitemapLocation": "sitemap.json",
-  "pages": [
-    "pages/index/index",
-    "pages/recycleview/recycleview"
-  ]
+  "pages": ["pages/index/index", "pages/recycleview/recycleview"]
 }
