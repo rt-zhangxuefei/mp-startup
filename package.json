@@ -8,8 +8,7 @@
     "url": "https://github.com/rt-zhangxuefei/mp-startup.git"
   },
   "dependencies": {
-    "bytes": "^3.1.0",
-    "dayjs": "^1.9.6",
+    "dayjs": "^1.9.7",
     "miniprogram-api-promise": "^1.0.4",
     "numeral": "^2.0.6"
   },
